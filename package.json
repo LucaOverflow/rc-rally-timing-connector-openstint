@@ -1,0 +1,26 @@
+{
+  "name": "rc-rally-timing-connector-openstint",
+  "version": "0.0.1",
+  "description": "This program will integrate openstint decoders with rc-rally-timing",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx tsx src/",
+    "start": "node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaOverflow/rc-rally-timing-connector-openstint.git"
+  },
+  "author": "LucaOverflow",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/LucaOverflow/rc-rally-timing-connector-openstint/issues"
+  },
+  "homepage": "https://github.com/LucaOverflow/rc-rally-timing-connector-openstint#readme"
+}
