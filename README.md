@@ -13,3 +13,7 @@ Options:
   --rc_rally_timing <url>  The URL of the rc-rally-timing instance (default: "https://rc-rally-timing.com")
   -h, --help               display help for command
 ```
+
+### Links
+- [Openstint](https://github.com/zsellera/openstint)
+- [RC Rally Timing](https://github.com/LucaOverflow/rc-rally-timing)
