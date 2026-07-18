@@ -1,16 +1,27 @@
 {
   "name": "rc-rally-timing-connector-openstint",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This program will integrate openstint decoders with rc-rally-timing",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "bin": "dist/transpiled/index.js",
+  "pkg": {
+    "targets": ["node22-linux-x64", "node22-macos-x64", "node22-win-x64", "node22-linux-arm64"],
+    "outputPath": "dist",
+    "assets": [
+      "node_modules/zeromq/**"
+    ]
+  },
   "type": "module",
   "devDependencies": {
     "@types/node": "^26.1.1",
+    "@yao-pkg/pkg": "^6.21.0",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   },
   "scripts": {
-    "build": "npx tsc",
+    "build:tsc": "npx tsc",
+    "build:pkg": "npx pkg . --sea",
+    "build": "npm run build:tsc && npm run build:pkg",
     "dev": "npx tsx src/",
     "start": "node dist"
   },
