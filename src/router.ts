@@ -1,7 +1,7 @@
 import { format } from "node:util"
 import { pb } from "./pb.js"
-import { decoderId } from "./params.js"
 import type { ClientResponseError } from "pocketbase"
+import { args } from "./index.js"
 
 interface messageFormatS {
     type: string,
@@ -72,7 +72,7 @@ class MessageP {
 
     private tryPostMessage () {
         pb.collection('passings').create({
-            decoder: decoderId,
+            decoder: args[0],
             timecode_ms: this.msg.timestamp,
             transponder: this.msg.transponderId,
             transponder_type: this.msg.transponderType,
